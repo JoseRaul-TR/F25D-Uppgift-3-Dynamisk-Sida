@@ -1,0 +1,60 @@
+/* Stored variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --light-gray: #f0f0f0;
+    --dark-gray: #333;
+    --light-background-color: #F8FAFC;
+    --dark-background-color: #021526;
+    --light-text-color: #333;
+    --dark-text-color: #eee;
+    --light-blur-background: rgba(240, 240, 240, 0.7);
+    --dark-blur-background: rgba(10, 10, 10, 0.7);
+    --light-modal-background: #fff;
+    --dark-modal-background: #111;
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-poppins: 'Poppins', sans-serif;
+}
+
+/* Style for elements in contact.html */
+
+.contact-info {
+    flex: 1;
+    order: 2;
+    text-align: left;
+    max-width: 60%;
+}
+
+.contact-info h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list i {
+    margin-right: 0.5rem;
+    width: 1.2rem;
+    text-align: center;
+}
+
+.contact-list a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+  /* End of style for elements in contact.html */

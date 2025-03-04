@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--     <link rel="stylesheet" href="./CSS/index-style.css">
+    <link rel="stylesheet" href="./CSS/common-style.css">
+    <link rel="stylesheet" href="./CSS/test-slydeshow.css"> -->
+
+    <script src="./scripts/common-script.js" defer></script>
+    <script src="./scripts/test-slideshow.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>        
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Test project slideshow</title>
+    <style> /* Temporal style */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        .mySlides {
+          display: none;
+        }
+        
+        .mySlides img {
+          width: 100%;
+        }
+        
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 30px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        .link {
+          color: white;
+          background-color: #007bff;
+          padding: 8px 12px;
+          text-decoration: none;
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+        /* Modal styles (basic) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto; /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+          position: relative;
+        }
+        
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        .modal-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        
+        </style>
+</head>
+<body>
+
+<section class="portfolio">
+<h2>Portfolio</h2>
+<!-- Slideshow container combined with modal – more details-->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <!-- Project 1 -->
+        <!-- <div class="mySlides fade">
+            <div class="numbertext">1 / 11</div>
+            <img src="./media/Project-1.png" alt="Project 1 picture" style="width:100%">
+            <div class="text">Log in sida</div>
+            <a href="#project1" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 1 -->
+        <!-- <div id="project1" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Log in sida</h4>
+                <p>Det här är mitt första projekt som Front-End utvecklare. Här skapar jag en enkel log in sida. Arbete pågå. <span class="emoji">🚧</span></p>
+                <img src="./media/Project-1.png" alt="Project 1 picture" class="modal-img">
+                <a href="https://github.com/JoseRaul-TR/F25D-Upgift1-LogIn" class="link" target="_blank">GitHub repository<i class="fa-brands fa-github"></i></a>   
+            </div>
+        </div> -->
+
+        <!-- Project 2 -->
+        <!-- <div class="mySlides fade">
+            <div class="numbertext">2 / 11</div>
+            <img src="./media/Project-2.png" alt="Project 2 picture" style="width:100%">
+            <div class="text">Profilsida</div>
+            <a href="#project2" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 2 -->
+<!--         <div id="project2" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Profilsida</h4>
+                <p>Mitt andra projekt som Front-End utvecklare är en profilsidda. Sida innehåller flera modal skapas med ren HTML och CSS som visar detaljerad projekt och CV. Sidan har ljusa och mörka teman, anpassad för mindre skärmar och med @media print query. Arbete pågå. <span class="emoji">🚧</span></p>
+                <img src="./media/Project-2.png" alt="Project 2 picture" class="modal-img">
+                <a href="https://github.com/JoseRaul-TR/F25D-Uppgift-2-Skapa-CV-sida" class="link" target="_blank">GitHub repository<i class="fa-brands fa-github"></i></a>
+            </div>
+        </div> -->
+
+        <!-- Project 3 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">3 / 11</div>
+            <img src="./media/project-3.jpg" alt="Project 3 picture" style="width:100%">
+            <div class="text">Dynamisk version av profilsidan</div>
+            <a href="#project3" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 3 -->
+<!--         <div id="project3" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Dynamisk version av profilsidan</h4>
+                <p>Mitt tredje projekt som Front-End utvecklare är precis den här siddan du läser nu. Här utvecklar jag viddare min profilsida med hjälp av JavaScript för att göra det mer dynamisk. CV sektionen lagras i en JSON fil och skapas med JS koden samt projekt sektionen visas nu på ett bildspel. Arbete pågå. <span class="emoji">🚧</span></p>
+                <img src="./media/project-3.jpg" alt="Project 3 picture" class="modal-img">
+                <a href="https://github.com/JoseRaul-TR/F25D-Uppgift-3-Dynamisk-sida" class="link" target="_blank">GitHub repository<i class="fa-brands fa-github"></i></a>
+            </div>
+        </div> -->
+
+        <!-- Project 4 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">4 / 11</div>
+            <img src="./media/project-4.jpg" alt="Disc cover" style="width:100%">
+            <div class="text">R. Strauss: <i>Eine Alpensinfonie</i></div>
+            <a href="#project4" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 4 -->
+<!--         <div id="project4" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Richard Strauss: <i>Eine Alpensinfonie</i></h4>
+                <p>Inspelning av Richard Strauss <i>Eine Alpensinfonie</i> med Göteborgs Symfoniker under ledning av Kent Nagano.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/33Z8ldsWlFWfUybGRRmjRZ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div> -->
+
+        <!-- Project 5 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">5 / 11</div>
+            <img src="./media/project-5.jpg" alt="Disc cover" style="width:100%">
+            <div class="text">R. Strauss: <i>Ein Heldenleben – Tod und Verklärung</i></div>
+            <a href="#project5" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 5 -->
+<!--         <div id="project5" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Richard Strauss: <i>Ein Heldenleben – Tod und Verklärung</i></h4>
+                <p>Inspelning av Richard Strauss <i>Ein Heldenlebend</i> och <i>Tod und Verklärung</i> med Göteborgs Symfoniker under ledning av Kent Nagano.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/56IBnOxLX6vkuk8OR8gfX7?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div> -->
+
+        <!-- Project 6 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">6 / 11</div>
+            <img src="./media/project-6.jpg" alt="Disc cover" style="width:100%">
+            <div class="text">J. Sibelius: Symphony No. 1 & <i>En Saga</i></div>
+            <a href="#project6" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 6 -->
+<!--         <div id="project6" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Jean Sibelius: Symphony No. 1 & <i>En Saga</i></h4>
+                <p>Inspelning av Jean Sibelius Symfoni nr. 1 i e-moll, op. 39 och <i>En Saga</i> med Göteborgs Symfoniker under ledning av Santtu-Matias Rouvali.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6nDePaX0Vb9q5FEovzEtLT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div> -->
+
+        <!-- Project 7 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">7 / 11</div>
+            <img src="./media/project-7.jpg" alt="Disc cover" style="width:100%">
+            <div class="text">J. Sibelius: Symphony No. 5</div>
+            <a href="#project7" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 7 -->
+<!--         <div id="project7" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Jean Sibelius: Symphony No. 5</h4>
+                <p>Inspelning av Jean Sibelius Symfoni nr. 5 i Es-Dur, op. 82 med Göteborgs Symfoniker under ledning av Santtu-Matias Rouvali.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2i6YgqeIbWD4z8DvdVZ2uZ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div> -->
+
+        <!-- Project 8 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">8 / 11</div>
+            <img src="./media/project-8.jpg" alt="Disc cover" style="width:100%">
+            <div class="text">bob hund: KlassiskBOBHUNDkonsert (Live GSO)</div>
+            <a href="#project8" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 8 -->
+<!--         <div id="project8" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>bob hund: KlassiskBOBHUNDkonsert(Live GSO)</h4>
+                <p>Live inspelning av en konsert med Bob hund och Göteborgs Symfoniker.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4AhXlhYOCVWcmvxIbTYWfD?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div> -->
+
+        <!-- Project 9 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">9 / 11</div>
+            <img src="./media/project-9.jpg" alt="Disc cover" style="width:100%">
+            <div class="text">J. Fridolfsson: <i>Sandvargen</i></div>
+            <a href="#project9" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 9 -->
+<!--         <div id="project9" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Johanna Fridolfsson: <i>Sandvargen</i></h4>
+                <p>Inspening av Johanna Fridolfssons barnopera <i>Sandvargen</i> med Göteborgs Operan.</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6xO8s2uby9w2KPt3rgpL7W?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div> -->
+
+        <!-- Project 10 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">10 / 11</div>
+            <img src="./media/project-10.jpg" alt="Performance image" style="width:100%">
+            <div class="text">Mike Svoboda: <i>Once Around the World</i></div>
+            <a href="#project10" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 10 -->
+<!--         <div id="project10" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Mike Svoboda: <i>Once Around the World</i></h4>
+                <p>Världspremiär av <i>Once Around the World</i> skriven av Mike Svoboda med Lucerne Festival Alumni Ensemble och Mike Svoboda som dirigent och berättare. 09.04.2017 Neubad (11am), Luzern – Schweiz.</p>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/218328359?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Mike Svoboda – Once Around the World (with English subtitles)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </div> -->
+
+        <!-- Project 11 -->
+<!--         <div class="mySlides fade">
+            <div class="numbertext">11 / 11</div>
+            <img src="./media/project-11.jpg" alt="Concert picture" style="width:100%">
+            <div class="text">O. Neuwirth: <i>Trurliade – Zone Zero</i></div>
+            <a href="#project10" class="link">Detaljer</a>
+        </div> -->
+        <!-- Modal project 11 -->
+<!--         <div id="project11" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close">&times;</a>
+                <h4>Olga Neuwirth: <i>Trurliade – Zone Zero</i></h4>
+                <p>Världspremiär av <i>Trurliade – Zone Zero</i> för slagverk solo och orkester skriven av Olga Neuwirth med Orchestra of the Luerne Festival Academy. Dirigent Susanna Mälkki och slagverk solo Victor Hanna. 27.08.2016 KKL Luzern – Schweiz.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4FVyC69fozo?si=aNwXTpUUOgNtPeON" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div> -->
+
+    </div>
+</section>
+
+</body>
+</html>

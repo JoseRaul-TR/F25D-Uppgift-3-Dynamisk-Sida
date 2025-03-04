@@ -1,0 +1,246 @@
+{
+    "cv": {
+        "education": [
+            {
+            "degree": "FrontEnd React utvecklare",
+            "school": "Yrkeshögskolan Borås",
+            "country": "🇸🇪",
+            "start_date": "2025/01",
+            "end_date": "2026/12"
+            },
+            {
+            "degree": "Konstnärlig masterexamen i musik med inriktning i symfoniskt orkesterspel",
+            "school": "Göteborgs Universitet",
+            "country": "🇸🇪",
+            "start_date": "2013/08",
+            "end_date": "2023/04"
+            },
+            {
+            "degree": "Konstnärlig kandidatexamen i musik med inriktning valthorn",
+            "school": "Conservatorio Superior de música de Murcia *Manuel Massotti Littel*",
+            "country": "🇪🇸",
+            "start_date": "2008/09",
+            "end_date": "2012/06"
+            }
+        ],
+        "experience": [
+            {
+                "company": "Wermland Opera",
+                "country": "🇸🇪",
+                "positions": [
+                    {
+                    "title": "Alternerande stämledare samt stämledare valthorn",
+                    "type": "Tidbegränsad anställning",
+                    "start_date": "2024/08",
+                    "end_date": "2025/04"
+                    },
+                    {
+                    "title": "Stämledare samt alternerande stämledare valthorn",
+                    "type": "Regelbunden gäst",
+                    "start_date": "2017/02",
+                    "end_date": "2024/04"
+                    }
+                ]
+                },
+                {
+                "company": "Göteborgs Operan",
+                "country": "🇸🇪",
+                "positions": [
+                    {
+                    "title": "Tutti valthorn med 3:e horn plikt",
+                    "type": "Tidbegränsad anställning",
+                    "start_date": "2022/08",
+                    "end_date": "2024/06"
+                    },
+                    {
+                    "title": "Tutti valthorn",
+                    "type": "Regelbunden gäst",
+                    "start_date": "2015/11",
+                    "end_date": "2020/12"
+                    },
+                    {
+                    "title": "Tutti valthorn",
+                    "type": "Tidbegränsad anställning",
+                    "start_date": "2019/10",
+                    "end_date": "2020/05"
+                    }
+                ]
+                },
+                {
+                    "company": "Smålands Musik och Teater",
+                    "country": "🇸🇪",
+                    "positions": [
+                        {
+                        "title": "Alternerande stämledare valthorn",
+                        "type": "Tidbegränsad anställning",
+                        "start_date": "2021/08",
+                        "end_date": "2022/06"
+                        },
+                        {
+                        "title": "Stämledare samt alternerande stämledare valthorn",
+                        "type": "Regelbunden gäst",
+                        "start_date": "2017/11",
+                        "end_date": "2024/04"
+                        }
+                    ]
+                },
+                {
+                "company": "Göteborgs Symfoniker",
+                "country": "🇸🇪",
+                "positions": [
+                    {
+                    "title": "Stämledare, tutti låg, hög samt assistent valthorn",
+                    "type": "Regelbunden gäst",
+                    "start_date": "2014/03",
+                    "end_date": "2024/02"
+                    }
+                ]
+                },
+                {
+                "company": "Läckö Slott Sommar Opera",
+                "country": "🇸🇪",
+                "positions": [
+                    {
+                    "title": "Stämledare valthorn",
+                    "type": "Medlem",
+                    "start_date": "2022/07",
+                    "end_date": "2022/07"
+                    },
+                    {
+                    "title": "Stämledare valthorn",
+                    "type": "Medlem",
+                    "start_date": "2020/07",
+                    "end_date": "2020/08"
+                    },
+                    {
+                    "title": "Stämledare valthorn",
+                    "type": "Medlem",
+                    "start_date": "2019/07",
+                    "end_date": "2019/08"
+                    },
+                    {
+                    "title": "Alternerande stämledare valthorn",
+                    "type": "Medlem",
+                    "start_date": "2018/07",
+                    "end_date": "2018/08"
+                    }
+                ]
+                },
+                {
+                "company": "Norrköpings Symfoniorkester",
+                "country": "🇸🇪",
+                "positions": [
+                    {
+                    "title": "3:e valthorn",
+                    "type": "Gäst",
+                    "start_date": "2022/01",
+                    "end_date": "2022/01"
+                    }
+                ]
+                },
+                {
+                "company": "Östgötamusiken",
+                "country": "🇸🇪",
+                "positions": [
+                    {
+                    "title": "Stämledare samt alternerande stämledare valthorn",
+                    "type": "Regelbunden gäst",
+                    "start_date": "2020/09",
+                    "end_date": "2021/12"
+                    }
+                ]
+                },
+                {
+                "company": "Lucerne Festival Alumni",
+                "country": "🇨🇭",
+                "positions": [
+                    {
+                    "title": "Valthorn",
+                    "type": "Medlem",
+                    "start_date": "2017/02",
+                    "end_date": "2019/05"
+                    }
+                ]
+                },
+                {
+                "company": "Lucerne Festival Orchestra Academy",
+                "country": "🇨🇭",
+                "positions": [
+                    {
+                    "title": "Stämledare samt alternerande stämledare valthorn",
+                    "type": "Akademiker",
+                    "start_date": "2016/08",
+                    "end_date": "2016/09"
+                    }
+                ]
+                },
+                {
+                "company": "Kristiansand Symfoniorkester",
+                "country": "🇳🇴",
+                "positions": [
+                    {
+                    "title": "Assistent valthorn",
+                    "type": "Gäst",
+                    "start_date": "2015/01",
+                    "end_date": "2015/01"
+                    }
+                ]
+                },
+                {
+                "company": "Orquesta Sinfónica de la Región de Murcia",
+                "country": "🇪🇸",
+                "positions": [
+                    {
+                    "title": "4:e valthorn",
+                    "type": "Gäst",
+                    "start_date": "2012/04",
+                    "end_date": "2012/05"
+                    }
+                ]
+                },
+                {
+                "company": "Quinteto de Viento 'Iter Musicae'",
+                "country": "🇪🇸",
+                "positions": [
+                    {
+                    "title": "Valthorn",
+                    "type": "Medlem",
+                    "start_date": "2008/09",
+                    "end_date": "2013/08"
+                    }
+                ]
+                },
+                {
+                "company": "Orquesta Sinfónica de Jumilla",
+                "country": "🇪🇸",
+                "positions": [
+                    {
+                    "title": "Stämledare samt alternerande stämledare valthorn",
+                    "type": "Medlem",
+                    "start_date": "2011/12",
+                    "end_date": "2013/07"
+                    }
+                ]
+            }
+        ],
+        "skills": {
+            "languages": [
+                {
+                    "language": "Spanska",
+                    "country": "🇪🇸",
+                    "level": "Modersmål"
+                },
+                {
+                    "language": "Svenska",
+                    "country": "🇸🇪",
+                    "level": "Flytande"
+                },
+                {
+                    "language": "Engelska",
+                    "country": "🇬🇧",
+                    "level": "Flytande"
+                }
+            ]
+        }
+    }
+}
