@@ -1,43 +1,4 @@
-<<<<<<< HEAD
-// W3 code for slideshow
-/* let slideIndex = 1;
-showSlides(slideIndex);
-
-=======
-/* //Slideshow
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
->>>>>>> parent of 2dae8cf... work Repo and projects slideshow
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-<<<<<<< HEAD
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} */
-
-// create slideshow from JSON data
+// create manual slideshow from JSON data
 fetch('./JSON/Projects-Portfolio.json')
   .then(response => response.json())
   .then(projects => {
@@ -76,7 +37,7 @@ fetch('./JSON/Projects-Portfolio.json')
       }
 
       if (project.vimeoEmbed) {
-        modalContent += `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="${project.vimeoEmbed}?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Vimeo embed"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`;
+        modalContent += `<div style="padding:56.25% 0 0 0 0;position:relative;"><iframe src="${project.vimeoEmbed}?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Vimeo embed"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`;
       }
 
       if (project.youtubeEmbed) {
@@ -88,33 +49,39 @@ fetch('./JSON/Projects-Portfolio.json')
       document.body.appendChild(modal);
     });
 
-    let slideIndex = 0;
-    showSlides();
+    // W3 code for slideshow (https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp)
 
-    function showSlides() {
+    let slideIndex = 1; // Start with the first slide
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
       let i;
       const slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
       for (i = 0; i < slides.length; i++) {
-=======
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    let thumbnails = document.getElementsByClassName("thumbnail");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-
-    for (i = 0; i < slides.length; i++) {
->>>>>>> parent of 2dae8cf... work Repo and projects slideshow
         slides[i].style.display = "none";
       }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
-<<<<<<< HEAD
+
+    // Add next/previous buttons
+    const prevButton = document.createElement('a');
+    prevButton.classList.add('prev');
+    prevButton.innerHTML = '&#10094;';
+    prevButton.addEventListener('click', () => plusSlides(-1));
+    slideshowContainer.appendChild(prevButton);
+
+    const nextButton = document.createElement('a');
+    nextButton.classList.add('next');
+    nextButton.innerHTML = '&#10095;';
+    nextButton.addEventListener('click', () => plusSlides(1));
+    slideshowContainer.appendChild(nextButton);
 
     // Modal functionality
     document.addEventListener('click', function (event) {
@@ -133,101 +100,3 @@ fetch('./JSON/Projects-Portfolio.json')
 
   })
   .catch(error => console.error('Error fetching projects:', error));
-=======
-    for (i = 0; i < thumbnails.length; i++) {
-        thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    thumbnails[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-// Event delegation for thumbnails
-document.querySelector('.thumbnail-row').addEventListener('click', (event) => {
-    if (event.target.classList.contains('thumbnail')) {
-        currentSlide(parseInt(event.target.dataset.slide));
-    }
-}); */
-
-/* ––––––––––––––––––––––––––––––––––––––––––– */
-
-//GitHub API
-
-        // Your JavaScript from the previous response goes here
-        document.addEventListener('DOMContentLoaded', () => {
-            const slideshow = document.querySelector('.slideshow');
-            const thumbnailRow = document.querySelector('.thumbnail-row');
-            const username = 'JoseRaul-TR';
-
-            fetch(`https://api.github.com/users/${username}/repos`)
-                .then(response => response.json())
-                .then(data => {
-                    data.forEach((repo, index) => {
-                        // Create slide
-                        const slide = document.createElement('div');
-                        slide.className = 'slide';
-                        slide.innerHTML = `
-                            <div class="numbertext">${index + 1} / ${data.length}</div>
-                            <h4>${repo.name}</h4>
-                            <p>${repo.description || 'No description available.'}</p>
-                            <a href="${repo.html_url}" target="_blank">Se det på GitHub</a>
-                        `;
-                        slideshow.appendChild(slide); // Append the slide to the slideshow
-
-                        // Create thumbnail
-                        const thumbnailColumn = document.createElement('div');
-                        thumbnailColumn.className = 'thumbnail-column';
-                        const thumbnail = document.createElement('div');
-                        thumbnail.className = 'thumbnail cursor';
-                        thumbnail.dataset.slide = index + 1;
-                        thumbnail.textContent = repo.language || "Repository";
-
-                        thumbnailColumn.appendChild(thumbnail); // Append the thumbnail to the column
-                        thumbnailRow.appendChild(thumbnailColumn); //Append the column to the row
-                    });
-
-                    // Initialize slideshow
-                    initializeSlideshow(data.length);
-                })
-                .catch(error => console.log('Error fetching GitHub repos: ', error));
-
-            function initializeSlideshow(slideCount) {
-                let slideIndex = 1;
-                showSlides(slideIndex);
-
-                window.plusSlides = function(n) {
-                    showSlides(slideIndex += n);
-                };
-
-                window.currentSlide = function(n) {
-                    showSlides(slideIndex = n);
-                };
-
-                function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("slide");
-                    let thumbnails = document.getElementsByClassName("thumbnail");
-
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < thumbnails.length; i++) {
-                        thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-                    }
-
-                    slides[slideIndex - 1].style.display = "block";
-                    thumbnails[slideIndex - 1].className += " active";
-                }
-
-                // Event delegation for thumbnails
-                thumbnailRow.addEventListener('click', (event) => {
-                    if (event.target.classList.contains('thumbnail')) {
-                        currentSlide(parseInt(event.target.dataset.slide));
-                    }
-                });
-            }
-        });
->>>>>>> parent of 2dae8cf... work Repo and projects slideshow
