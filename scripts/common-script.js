@@ -16,13 +16,13 @@ function setActiveLink(link) {
 }
 
 // Check the current page and set the active link
-if (currentPage === "/" || currentPage.includes("index.html")) { //Handles root path and index.html
+if (currentPage.endsWith("/") || currentPage.endsWith("index.html")) { //Handles root path and index.html
     setActiveLink(homeLink);
-} else if (currentPage.includes("portfolio.html")) {
+} else if (currentPage.endsWith("portfolio.html")) {
     setActiveLink(portfolioLink);
-} else if (currentPage.includes("about.html")) {
+} else if (currentPage.endsWith("about.html")) {
     setActiveLink(aboutLink);
-} else if (currentPage.includes("contact.html")) {
+} else if (currentPage.endsWith("contact.html")) {
     setActiveLink(contactLink);
 }
 
@@ -40,13 +40,13 @@ function showSection(section) {
     if (section) section.style.display = "block";
 }
 
-if (currentPage === "/" || currentPage.includes("index.html")) {
+if (currentPage.endsWith("/") || currentPage.endsWith("index.html")) {
     if (homeSection) showSection(homeSection);
-} else if (currentPage.includes("portfolio.html")) {
+} else if (currentPage.endsWith("portfolio.html")) {
     if (portfolioSection) showSection(portfolioSection);
-} else if (currentPage.includes("about.html")) {
+} else if (currentPage.endsWith("about.html")) {
     if (aboutSection) showSection(aboutSection);
-} else if (currentPage.includes("contact.html")) {
+} else if (currentPage.endsWith("contact.html")) {
     if (contactSection) showSection(contactSection);
 }
 

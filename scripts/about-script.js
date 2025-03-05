@@ -64,16 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     degreeSpan.className = "degree";
                     degreeSpan.textContent = eduItem.degree + '. ';
 
-                    /* //Creates one li for the degree
-                    const degreeLi = document.createElement('li');
-                    const degree = document.createElement ('span');
-                    degree.className = 'degree';
-                    degree.textContent = eduItem.degree + '.';
-                    degreeLi.appendChild(degree);
-                    ul.appendChild(degreeLi);
-                    //Second li for school, country and dates together
-                    const detailsLi = document.createElement('li');*/
-
                     //Create school span with italics in it
                     const schoolSpan = document.createElement('span');
                     schoolSpan.className = 'school';
@@ -98,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     //Create dates span
                     const datesSpan = document.createElement('span');
                     datesSpan.className = 'dates';
-                    datesSpan.textContent = `${eduItem.start_date} – ${eduItem.end_date}`;
+                    datesSpan.textContent = `${eduItem.start_date} – ${eduItem.end_date}.`;
         
                     //Append all spans to the li
                     li.appendChild(degreeSpan);

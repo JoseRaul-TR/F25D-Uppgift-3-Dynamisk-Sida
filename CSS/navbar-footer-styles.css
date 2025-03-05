@@ -18,16 +18,21 @@
   --font-family-poppins: 'Poppins', sans-serif;
 }
 
+header {
+  display: inline-flex;
+  width: 100%;
+}
+
 /* Place the navbar at the top of the page, and make it stick */
 .navbar {
   backdrop-filter: blur(20px);
   background-color: var(--light-blur-background);
   transition: background-color 0.3s ease;  
-  overflow: hidden;
-  position: fixed;
+  position: sticky;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 1em;
+  padding: 0.7rem 0;
   z-index: 100%;
 }
 
@@ -35,10 +40,11 @@
 .navbar a {
   display: inline-block;
   text-decoration: none;
+  color: var(--dark-gray);
   text-transform: uppercase;
   font-weight: normal;
   padding: 0.5rem 1rem;
-  transition: color ease;
+  transition: color 0.3s ease;
 }
 
 /* Change the color of links on hover */
@@ -46,6 +52,7 @@
   color: var(--primary-color);
 }
 
+/* Change default color for visited links in navbar */
 .navbar a:visited {
   color: inherit;
 }
@@ -61,8 +68,6 @@
 .navbar .icon {
   display: none;
 }
-
-
 
 footer {
   backdrop-filter: blur(20px);
@@ -114,7 +119,11 @@ footer p {
 /* Responsive Adjustments */
 /* Styles for small screens */
 @media screen and (max-width: 480px) {
-  
+  .navbar a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
   .navbar a:not(:first-child) {
     display: none;
   }
@@ -135,8 +144,7 @@ footer p {
     display: block;
     text-align: left;
   }
-
-  
+}
 
 /* End Responsive Adjustments */
 
@@ -145,27 +153,9 @@ footer p {
 /* Print Responsive Adjustments */
 
 @media print {
-  body {
-    font-family: var(--font-family-inter), sans-serif;
-    color: #000;
-    background-color: #fff;
-  }
-
-  header,
-  footer,
-  nav {
+  .navbar ,
+  footer {
     display: none;
-  }
-
-  main {
-    padding-top: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-      color: #000; 
   }
 }
 
@@ -173,8 +163,7 @@ footer p {
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-
-
+  header,
   .navbar {
     background-color: var(--dark-blur-background);
   }
@@ -209,29 +198,6 @@ footer p {
 
   .social-icons a:visited i {
       color: inherit; 
-  }
-
-  /* about.html specific Dark Mode Styles */
-  .CV-container,
-  .CV-container .CV-content,
-  .CV-container h2,
-  .CV-container h3,
-  .CV-container .timeline dt,
-  .CV-container .timeline dd,
-  .CV-container .languages-list dt {
-    background-color: var(--dark-modal-background);
-    color: var(--dark-text-color);
-    border-color: #555;
-  }
-
-  .CV-container .close { 
-    color: var(--dark-text-color); 
-  }
-
-  /* contact.html specific dark mode styles */
-  .contact-info h2,
-  .contact-list a {
-    color: var(--dark-text-color);
   }
 }
 /* End Dark Mode */

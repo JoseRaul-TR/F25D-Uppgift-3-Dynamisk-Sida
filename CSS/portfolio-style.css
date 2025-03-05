@@ -1,34 +1,104 @@
-/* Work combining already existing style */
+/* Stored variables (assuming these are in your navbar-footer-styles.css) */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --light-gray: #f0f0f0;
+  --dark-gray: #333;
+  --light-background-color: #F8FAFC;
+  --dark-background-color: #021526;
+  --light-text-color: #333;
+  --dark-text-color: #eee;
+  --light-blur-background: rgba(240, 240, 240, 0.7);
+  --dark-blur-background: rgba(10, 10, 10, 0.7);
+  --light-modal-background: #fff;
+  --dark-modal-background: #111;
+  --font-family-inter: 'Inter', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
+}
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-family-inter), sans-serif;
+  background-color: var(--light-background-color);
+  color: var(--light-text-color);
+  transition: background-color 0.3 ease, color 0.3 ease;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  font-family: var(--font-family-poppins), sans-serif;
+  text-align: center;
+}
+
+.portfolio {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Slideshow container */
 .slideshow-container {
   position: relative;
-  max-width: 90%; /* Adjust as needed */
-  max-height: 50vh;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
   margin: auto;
 }
 
+/* Slides */
 .mySlides {
   display: none;
 }
 
 .mySlides img {
-  width: auto;
-  height: 100%; /* Set a fixed height */
-  object-fit: cover; /* Ensures images fill the space without distortion */
-  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
 }
 
+.mySlides .text {
+  padding: 1rem;
+  background-color: inherit;
+  color: var(--light-text-color);
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mySlides .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
+  margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -37,54 +107,41 @@
   user-select: none;
 }
 
+.prev {
+  left: 0;
+}
+
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--primary-color);
 }
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Modal CSS */
-
+/* Modal styles */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  background-color: var(--light-modal-background);
+  margin: 2em auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  border: 1px solid var(--dark-gray);
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -93,26 +150,174 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .close:hover,
 .close:focus {
   color: black;
-  text-decoration: none;
-  cursor: pointer;
+}
+
+.modal-content h4 {
+  margin-bottom: 1rem;
+  font-family: var(--font-family-poppins), sans-serif;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
 }
 
 .modal-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  display: block;
-  margin: 10px auto;
+  margin-bottom: 1rem;
 }
 
-.link {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-  text-decoration: none;
-  color: blue;
+.modal-content iframe,
+.modal-content video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
 }
+
+/* Link in slide and modal */
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* End of style for elements in portfolio.html */
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Responsive Adjustments */
+/* Styles for small screens */
+@media screen and (max-width: 767px) {
+  .portfolio {
+      width: 95%;
+  }
+
+  .modal-content {
+      width: 90%;
+  }
+}
+/* End Responsive Adjustments */
+
+/* –––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Print Responsive Adjustments */
+@media print {
+  body {
+      font-family: var(--font-family-inter), sans-serif;
+      color: #000;
+      background-color: #fff;
+  }
+
+  header,
+  footer,
+  .prev,
+  .next {
+      display: none;
+  }
+
+  main {
+      padding: 0;
+  }
+
+  .portfolio {
+      width: 100%;
+      margin: 0;
+  }
+
+  .slideshow-container,
+  .mySlides {
+      display: block !important;
+  }
+
+  .mySlides img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+  }
+
+  .modal {
+      display: block;
+      position: static;
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+  }
+
+  .modal-content {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+  }
+
+  .close {
+      display: none;
+  }
+
+  .link {
+      color: #000 !important;
+      text-decoration: none !important;
+  }
+
+  .link::after {
+      content: " (" attr(href) ") ";
+      font-size: 90%;
+  }
+}
+
+/* End Print Responsive Adjustments */
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: var(--dark-background-color);
+      color: var(--dark-text-color);
+  }
+
+  main,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  .mySlides .text,
+  .modal-content {
+      background-color: var(--dark-background-color);
+      color: var(--dark-text-color);
+  }
+
+  .modal-content {
+      background-color: var(--dark-modal-background);
+      border-color: #555;
+  }
+
+  .close {
+      color: var(--dark-text-color);
+  }
+
+  .link {
+      color: var(--primary-color);
+  }
+
+  .link:hover {
+      color: var(--secondary-color);
+  }
+}
+/* End Dark Mode */

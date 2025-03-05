@@ -18,6 +18,74 @@
 
 /* Style for elements in contact.html */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-family-inter), sans-serif;
+    background-color: var(--light-background-color);
+    color: var(--light-text-color);
+    transition: background-color 0.3 ease, color 0.3 ease;
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    padding-top: 1.2rem;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    font-family: var(--font-family-poppins), sans-serif;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 100%;
+    gap: 5rem;
+}
+
+.profile h2 {
+    margin-bottom: 1rem;
+}
+
+.img-container {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.emoji {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-left: 0.2rem;
+}
+
 .contact-info {
     flex: 1;
     order: 2;
@@ -58,3 +126,77 @@
 }
 
   /* End of style for elements in contact.html */
+
+  /* –––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Responsive Adjustments */
+/* Styles for small screens */
+@media screen and (max-width: 480px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .img-container {
+        width: 60%;
+        height: 60%;
+        max-width: 250px;
+    }
+}
+
+/* End Responsive Adjustments */
+
+/* –––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Print Responsive Adjustments */
+
+@media print {
+    body {
+        font-family: var(--font-family-inter), sans-serif;
+        color: #000;
+        background-color: #fff;
+    }
+
+    main {
+        padding-top: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #000; 
+    }
+}
+
+/* End Print Responsive Adjustments */
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    /* Common dark mode styles  */
+    body {
+        background-color: var(--dark-background-color);
+        color: var(--dark-text-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    .profile h2 {
+        color: var(--dark-text-color);
+    }
+
+    .contact-info h2,
+    .contact-list a {
+        color: var(--dark-text-color);
+    }
+}
+
+/* End Dark Mode */
