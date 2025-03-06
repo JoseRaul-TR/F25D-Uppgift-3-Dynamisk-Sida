@@ -6,8 +6,7 @@ fetch('./JSON/Projects-Portfolio.json')
 
     projects.forEach(project => {
       const slide = document.createElement('div');
-      slide.classList.add('mySlides');
-      slide.classList.add('fade');
+      slide.classList.add('mySlides', 'fade');
 
       slide.innerHTML = `
         <div class="numbertext">${project.number}</div>
@@ -22,30 +21,75 @@ fetch('./JSON/Projects-Portfolio.json')
       modal.id = project.id;
       modal.classList.add('modal');
 
-      let modalContent = `<div class="modal-content"><a href="#" class="close">×</a><h4>${project.modalTitle}</h4><p>${project.modalDescription}</p>`;
+      const modalContent = document.createElement('div');
+      modalContent.classList.add('modal-content');
+
+      modalContent.innerHTML = `<a href='#' class='close'>x</a><h4>${project.modalTitle}</h4><p>${project.modalDescription}</p>`;
 
       if (project.modalImage) {
-        modalContent += `<img src="${project.modalImage}" alt="${project.alt}" class="modal-img">`;
+        const img = document.createElement('img');
+        img.src = project.modalImage;
+        img.alt = project.alt;
+        img.classList.add('modal-img');
+        modalContent.appendChild(img);
       }
 
       if (project.githubLink) {
-        modalContent += `<a href="${project.githubLink}" class="link" target="_blank">GitHub repository<i class="fa-brands fa-github"></i></a>`;
+        const githubLink = document.createElement('a');
+        githubLink.href = project.githubLink;
+        githubLink.classList.add('link');
+        githubLink.target = '_blank';
+        githubLink.innerHTML = 'GitHub repository<i class="fa-brands fa-github"></i>';
+        modalContent.appendChild(githubLink);
       }
 
+      // Create iframes only if the embed URLs exixt
       if (project.spotifyEmbed) {
-        modalContent += `<iframe style="border-radius:12px" src="${project.spotifyEmbed}" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+        const spotifyIframe = document.createElement('iframe');
+        spotifyIframe.style.borderRadius = '12px';
+        spotifyIframe.src = project.spotifyEmbed;
+        spotifyIframe.width = '100%';
+        spotifyIframe.height = '426';
+        spotifyIframe.frameBorder = '0';
+        spotifyIframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+        spotifyIframe.loading = 'lazy';
+        modalContent.appendChild(spotifyIframe);
       }
 
       if (project.vimeoEmbed) {
-        modalContent += `<div style="padding:56.25% 0 0 0 0;position:relative;"><iframe src="${project.vimeoEmbed}?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Vimeo embed"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`;
+        const vimeoIframe = document.createElement('iframe');
+        vimeoIframe.src = `${project.vimeoEmbed}?badge=0&autopause=0&player_id=0&app_id=58479`;
+        vimeoIframe.frameBorder = '0';
+        vimeoIframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media';
+        vimeoIframe.style.position = 'absolute';
+        vimeoIframe.style.top = '0';
+        vimeoIframe.style.left = '0';
+        vimeoIframe.style.width = '100%';
+        vimeoIframe.style.height = '100%';
+        const vimeoContainer = document.createElement('div');
+        vimeoContainer.style.padding = '56.25% 0 0 0';
+        vimeoContainer.style.position = 'relative';
+        vimeoContainer.appendChild(vimeoIframe);
+        modalContent.appendChild(vimeoContainer);
+        const vimeoScript = document.createElement('script');
+        vimeoScript.src = 'https://player.vimeo.com/api/player.js';
+        modalContent.appendChild(vimeoScript);
       }
 
       if (project.youtubeEmbed) {
-        modalContent += `<iframe width="560" height="315" src="${project.youtubeEmbed}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        const youtubeIframe = document.createElement('iframe');
+        youtubeIframe.width = '100%';
+        youtubeIframe.height = '426';
+        youtubeIframe.src = project.youtubeEmbed;
+        youtubeIframe.title = 'YouTube video player';
+        youtubeIframe.frameBorder = '0';
+        youtubeIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen';
+        youtubeIframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        youtubeIframe.allowFullscreen = true;
+        modalContent.appendChild(youtubeIframe);
       }
 
-      modalContent += `</div>`;
-      modal.innerHTML = modalContent;
+      modal.appendChild(modalContent);
       document.body.appendChild(modal);
     });
 

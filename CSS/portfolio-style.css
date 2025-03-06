@@ -67,7 +67,9 @@ h4 {
 
 .mySlides img {
   width: 100%;
+  max-height: 400px;
   height: auto;
+  object-fit: contain;
   display: block;
   margin-bottom: 1rem;
 }
@@ -85,6 +87,7 @@ h4 {
 
 .mySlides .numbertext {
   color: #f2f2f2;
+  background-color: #0056b3;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -103,8 +106,9 @@ h4 {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
   user-select: none;
+  background-color: var(--secondary-color);
 }
 
 .prev {
@@ -137,8 +141,8 @@ h4 {
   margin: 2em auto;
   padding: 20px;
   border: 1px solid var(--dark-gray);
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 900px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -167,17 +171,30 @@ h4 {
   margin-bottom: 1.5rem;
 }
 
-.modal-img {
+.modal-img,
+.modal-content iframe,
+.comdal-content video {
   width: 100%;
-  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
   margin-bottom: 1rem;
 }
 
 .modal-content iframe,
 .modal-content video {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+}
+
+.modal-content iframe iframe,
+.modal-content video video{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
+  height: 100%;
 }
 
 /* Link in slide and modal */
@@ -203,11 +220,22 @@ h4 {
 /* Styles for small screens */
 @media screen and (max-width: 767px) {
   .portfolio {
-      width: 95%;
+    width: 95%;
   }
 
   .modal-content {
-      width: 90%;
+    width: 95%;
+  }
+
+  .modal-img,
+  .modal-content iframe,
+  .modal-content video {
+    max-height: 300px;
+  }
+  
+  .modal-content iframe,
+  .modal-content video {
+    padding-bottom: 56.25%;
   }
 }
 /* End Responsive Adjustments */
