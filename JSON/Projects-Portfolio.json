@@ -39,7 +39,7 @@
         "modalTitle": "Dynamisk version av profilsidan",
         "modalDescription": "Mitt tredje projekt som Front-End utvecklare är precis den här siddan du läser nu. Här utvecklar jag viddare min profilsida med hjälp av JavaScript för att göra det mer dynamisk. CV sektionen lagras i en JSON fil och skapas med JS koden samt projekt sektionen visas nu på ett bildspel. Arbete pågå. <span class=\"emoji\">🚧</span>",
         "modalImage": "./media/project-3.png",
-        "githubLink": "https://github.com/JoseRaul-TR/F25D-Uppgift-3-Dynamisk-sida",
+        "githubLink": "https://github.com/JoseRaul-TR/F25D-Uppgift-3-Dynamisk-Sida",
         "spotifyEmbed": null,
         "vimeoEmbed": null,
         "youtubeEmbed": null
