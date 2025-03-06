@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOMContentLoaded event fired");
 
     // Open and close CV Modal
     // Obtain DOM elements
@@ -8,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to open modal
     btnOpen.onclick = function() {
-        console.log("'Vissa detaljerad CV' button clicked");
         modal.style.display = "block";
-        console.log("Modal display:", modal.style.display);
 
         //Reset scroll position to top
         const cvContainer = document.querySelector('.CV-container');
@@ -27,10 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(jsonData => {
-            console.log("JSON data: ", jsonData);
             const cvData = jsonData.cv;
             const cvContainer = document.querySelector('.CV-container');
-            console.log("cvContainer:", cvContainer);
 
             //Clean container before adding new content
             cvContainer.innerHTML = '<span class="closeModal">&times;</span><h2>Curriculum Viate</h2>';
@@ -239,5 +234,4 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Error fetching JSON:", error);
         });
     };
-    console.log("End of DOMCOntentLoaded");
 });
