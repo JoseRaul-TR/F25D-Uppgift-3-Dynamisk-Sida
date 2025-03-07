@@ -212,17 +212,6 @@ h4 {
   .modal-content {
     width: 95%;
   }
-
-  .modal-img,
-  .modal-content iframe,
-  .modal-content video {
-    max-height: 300px;
-  }
-  
-  .modal-content iframe,
-  .modal-content video {
-    padding-bottom: 56.25%;
-  }
 }
 /* End Responsive Adjustments */
 
