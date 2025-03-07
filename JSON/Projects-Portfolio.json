@@ -10,9 +10,7 @@
         "modalDescription": "Det här är mitt första projekt som Front-End utvecklare. Här skapar jag en enkel log in sida. Arbete pågå. <span class=\"emoji\">🚧</span>",
         "modalImage": "./media/Project-1.png",
         "githubLink": "https://github.com/JoseRaul-TR/F25D-Upgift1-LogIn",
-        "spotifyEmbed": null,
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": null
     },
     {
         "id": "project2",
@@ -25,9 +23,7 @@
         "modalDescription": "Mitt andra projekt som Front-End utvecklare är en profilsidda. Sida innehåller flera modal skapas med ren HTML och CSS som visar detaljerad projekt och CV. Sidan har ljusa och mörka teman, anpassad för mindre skärmar och med @media print query. Arbete pågå. <span class=\"emoji\">🚧</span>",
         "modalImage": "./media/Project-2.png",
         "githubLink": "https://github.com/JoseRaul-TR/F25D-Uppgift-2-Skapa-CV-sida",
-        "spotifyEmbed": null,
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": null
     },
     {
         "id": "project3",
@@ -40,9 +36,7 @@
         "modalDescription": "Mitt tredje projekt som Front-End utvecklare är precis den här siddan du läser nu. Här utvecklar jag viddare min profilsida med hjälp av JavaScript för att göra det mer dynamisk. CV sektionen lagras i en JSON fil och skapas med JS koden samt projekt sektionen visas nu på ett bildspel. Arbete pågå. <span class=\"emoji\">🚧</span>",
         "modalImage": "./media/project-3.png",
         "githubLink": "https://github.com/JoseRaul-TR/F25D-Uppgift-3-Dynamisk-Sida",
-        "spotifyEmbed": null,
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": null
     },
         {
         "id": "project4",
@@ -55,9 +49,7 @@
         "modalDescription": "Inspelning av Richard Strauss <i>Eine Alpensinfonie</i> med Göteborgs Symfoniker under ledning av Kent Nagano.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": "https://open.spotify.com/embed/album/33Z8ldsWlFWfUybGRRmjRZ?utm_source=generator",
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/playlist/5ysVjzDgtExV1f809Yb4OL?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     {
         "id": "project5",
@@ -70,9 +62,7 @@
         "modalDescription": "Inspelning av Richard Strauss <i>Ein Heldenlebend</i> och <i>Tod und Verklärung</i> med Göteborgs Symfoniker under ledning av Kent Nagano.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": "https://open.spotify.com/embed/album/56IBnOxLX6vkuk8OR8gfX7?utm_source=generator",
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/album/56IBnOxLX6vkuk8OR8gfX7?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     {
         "id": "project6",
@@ -85,9 +75,7 @@
         "modalDescription": "Inspelning av Jean Sibelius Symfoni nr. 1 i e-moll, op. 39 och <i>En Saga</i> med Göteborgs Symfoniker under ledning av Santtu-Matias Rouvali.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": "https://open.spotify.com/embed/album/6nDePaX0Vb9q5FEovzEtLT?utm_source=generator",
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/album/6nDePaX0Vb9q5FEovzEtLT?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     {
         "id": "project7",
@@ -100,9 +88,7 @@
         "modalDescription": "Inspelning av Jean Sibelius Symfoni nr. 5 i Es-Dur, op. 82 med Göteborgs Symfoniker under ledning av Santtu-Matias Rouvali.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": "https://open.spotify.com/embed/playlist/2i6YgqeIbWD4z8DvdVZ2uZ?utm_source=generator",
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/playlist/2i6YgqeIbWD4z8DvdVZ2uZ?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     {
         "id": "project8",
@@ -115,9 +101,7 @@
         "modalDescription": "Live inspelning av en konsert med Bob hund och Göteborgs Symfoniker.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": "https://open.spotify.com/embed/album/4AhXlhYOCVWcmvxIbTYWfD?utm_source=generator",
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/album/4AhXlhYOCVWcmvxIbTYWfD?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     {
         "id": "project9",
@@ -130,9 +114,7 @@
         "modalDescription": "Inspening av Johanna Fridolfssons barnopera <i>Sandvargen</i> med Göteborgs Operan.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": "https://open.spotify.com/embed/album/6xO8s2uby9w2KPt3rgpL7W?utm_source=generator",
-        "vimeoEmbed": null,
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/album/6xO8s2uby9w2KPt3rgpL7W?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
     },
     {
         "id": "project10",
@@ -145,9 +127,7 @@
         "modalDescription": "Världspremiär av <i>Once Around the World</i> skriven av Mike Svoboda med Lucerne Festival Alumni Ensemble och Mike Svoboda som dirigent och berättare. 09.04.2017 Neubad (11am), Luzern – Schweiz.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": null,
-        "vimeoEmbed": "https://player.vimeo.com/video/218328359?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        "youtubeEmbed": null
+        "iframeEmbed": "<iframe src=\"https://player.vimeo.com/video/218328359?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" width=\"858\" height=\"483\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media\" title=\"Mike Svoboda – Once Around the World (with English subtitles)\"></iframe>"
     },
     {
         "id": "project11",
@@ -160,8 +140,6 @@
         "modalDescription": "Världspremiär av <i>Trurliade – Zone Zero</i> för slagverk solo och orkester skriven av Olga Neuwirth med Orchestra of the Luerne Festival Academy. Dirigent Susanna Mälkki och slagverk solo Victor Hanna. 27.08.2016 KKL Luzern – Schweiz.",
         "modalImage": null,
         "githubLink": null,
-        "spotifyEmbed": null,
-        "vimeoEmbed": null,
-        "youtubeEmbed": "https://www.youtube.com/embed/4FVyC69fozo?si=aNwXTpUUOgNtPeON"
+        "iframeEmbed": "<iframe width=\"858\" height=\"483\" src=\"https://www.youtube.com/embed/4FVyC69fozo?si=YEUXL4u3gHljedKj\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
     }
 ]

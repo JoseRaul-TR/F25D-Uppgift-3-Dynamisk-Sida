@@ -43,50 +43,11 @@ fetch('./JSON/Projects-Portfolio.json')
         modalContent.appendChild(githubLink);
       }
 
-      // Create iframes only if the embed URLs exixt
-      if (project.spotifyEmbed) {
-        const spotifyIframe = document.createElement('iframe');
-        spotifyIframe.style.borderRadius = '12px';
-        spotifyIframe.src = project.spotifyEmbed;
-        spotifyIframe.width = '100%';
-        spotifyIframe.height = '426';
-        spotifyIframe.frameBorder = '0';
-        spotifyIframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-        spotifyIframe.loading = 'lazy';
-        modalContent.appendChild(spotifyIframe);
-      }
-
-      if (project.vimeoEmbed) {
-        const vimeoIframe = document.createElement('iframe');
-        vimeoIframe.src = `${project.vimeoEmbed}?badge=0&autopause=0&player_id=0&app_id=58479`;
-        vimeoIframe.frameBorder = '0';
-        vimeoIframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media';
-        vimeoIframe.style.position = 'absolute';
-        vimeoIframe.style.top = '0';
-        vimeoIframe.style.left = '0';
-        vimeoIframe.style.width = '100%';
-        vimeoIframe.style.height = '100%';
-        const vimeoContainer = document.createElement('div');
-        vimeoContainer.style.padding = '56.25% 0 0 0';
-        vimeoContainer.style.position = 'relative';
-        vimeoContainer.appendChild(vimeoIframe);
-        modalContent.appendChild(vimeoContainer);
-        const vimeoScript = document.createElement('script');
-        vimeoScript.src = 'https://player.vimeo.com/api/player.js';
-        modalContent.appendChild(vimeoScript);
-      }
-
-      if (project.youtubeEmbed) {
-        const youtubeIframe = document.createElement('iframe');
-        youtubeIframe.width = '100%';
-        youtubeIframe.height = '426';
-        youtubeIframe.src = project.youtubeEmbed;
-        youtubeIframe.title = 'YouTube video player';
-        youtubeIframe.frameBorder = '0';
-        youtubeIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen';
-        youtubeIframe.referrerPolicy = 'strict-origin-when-cross-origin';
-        youtubeIframe.allowFullscreen = true;
-        modalContent.appendChild(youtubeIframe);
+      // Create iframes only if the embed code exixts
+      if (project.iframeEmbed) {
+        const iframeContainer = document.createElement('div');
+        iframeContainer.innerHTML = project.iframeEmbed;
+        modalContent.appendChild(iframeContainer);
       }
 
       modal.appendChild(modalContent);
