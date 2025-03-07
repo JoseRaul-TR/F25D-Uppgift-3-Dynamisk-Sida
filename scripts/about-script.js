@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 experienceData.forEach(company => {
                     //Creates one li for company + country flag
                     const companyLi = document.createElement('li');
+                    companyLi.className = "company-details";
                     const companySpan = document.createElement ('span');
                     companySpan.className = 'company';
                     companySpan.textContent = company.company;
@@ -134,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     //Create a nested ul with possition details
                         const positionsUl = document.createElement('ul');
+                        positionsUl.className = "positions-details";
                         company.positions.forEach(position => {
                             const positionLi = document.createElement('li');
 
@@ -154,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
                             positionsUl.appendChild(positionLi);
                         });
-                        ul.appendChild(positionsUl);
+                        companyLi.appendChild(positionsUl);
                 });
             }
             //Anrop createSection function
