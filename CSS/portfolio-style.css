@@ -52,6 +52,10 @@ h4 {
   text-align: center;
 }
 
+.portfolio h2 {
+  padding-bottom: .5em;
+}
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -171,30 +175,12 @@ h4 {
   margin-bottom: 1.5rem;
 }
 
-.modal-img,
-.modal-content iframe,
-.comdal-content video {
+.modal-img {
   width: 100%;
   max-height: 500px;
   object-fit: contain;
   display: block;
   margin-bottom: 1rem;
-}
-
-.modal-content iframe,
-.modal-content video {
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  position: relative;
-}
-
-.modal-content iframe iframe,
-.modal-content video video{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* Link in slide and modal */
