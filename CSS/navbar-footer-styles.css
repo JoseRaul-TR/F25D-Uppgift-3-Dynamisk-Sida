@@ -21,9 +21,9 @@
 header {
   display: inline-flex;
   width: 100%;
+  position: sticky;
 }
 
-/* Place the navbar at the top of the page, and make it stick */
 .navbar {
   backdrop-filter: blur(20px);
   background-color: var(--light-blur-background);
@@ -36,7 +36,6 @@ header {
   z-index: 100%;
 }
 
-/* Style the links inside the navigation bar */
 .navbar a {
   display: inline-block;
   text-decoration: none;
@@ -44,27 +43,23 @@ header {
   text-transform: uppercase;
   font-weight: normal;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
 }
 
-/* Change the color of links on hover */
 .navbar a:hover {
   color: var(--primary-color);
 }
 
-/* Change default color for visited links in navbar */
 .navbar a:visited {
   color: inherit;
 }
 
-/* Add an underline and bold in the active link */
 .navbar a.active {
   font-weight: bold;
   text-decoration: underline;
   color: var(--secondary-color);
 }
 
-/* Hide the link that should open and close the navbar on small screens */
 .navbar .icon {
   display: none;
 }
@@ -98,10 +93,12 @@ footer p {
   text-decoration: none;
   margin: 0 0.5rem;
   display: inline-block;
+  transition: color 0.4s ease;
+
 }
 
 .social-icons a i { 
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
   padding: 0.5rem;
 }
 
