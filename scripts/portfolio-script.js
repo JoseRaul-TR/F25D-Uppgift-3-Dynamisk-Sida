@@ -1,3 +1,6 @@
+/* Check get data from JSON!!!!! */
+
+
 // create manual slideshow from JSON data
 fetch('./JSON/Projects-Portfolio.json')
   .then(response => response.json())

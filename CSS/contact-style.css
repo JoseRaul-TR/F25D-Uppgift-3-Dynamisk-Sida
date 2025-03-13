@@ -125,6 +125,7 @@ p {
     text-decoration: underline;
 }
 
+
   /* End of style for elements in contact.html */
 
   /* –––––––––––––––––––––––––––––––––––––––––––––– */
@@ -145,6 +146,8 @@ p {
         height: 60%;
         max-width: 250px;
     }
+
+
 }
 
 /* End Responsive Adjustments */
