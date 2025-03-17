@@ -1,5 +1,4 @@
-/* Check get data from JSON!!!!! */
-
+// Using "fetch" to obtain the JSON data
 
 // create manual slideshow from JSON data
 fetch('./JSON/Projects-Portfolio.json')
@@ -108,3 +107,93 @@ fetch('./JSON/Projects-Portfolio.json')
 
   })
   .catch(error => console.error('Error fetching projects:', error));
+
+// Using "get" to obtain the data from JSON – Not working!
+
+/* function getJSON(url, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'json';
+  xhr.onload = () => xhr.status === 200 && callback(xhr.response);
+  xhr.onerror = () => console.error('Network error.');
+  xhr.send();
+}
+
+getJSON('./JSON/Projects-Portfolio.json', projects => {
+  const container = document.querySelector('.slideshow-container');
+  let slideIndex = 1;
+
+  projects.forEach(project => {
+    const slide = createSlide(project);
+    container.appendChild(slide);
+    document.body.appendChild(createModal(project));
+  });
+
+  addSlideControls(container, projects.length, slideIndex);
+  setupModalListeners();
+
+  showSlides(slideIndex);
+});
+
+function createSlide(project) {
+  const slide = document.createElement('div');
+  slide.className = 'mySlides fade';
+  slide.innerHTML = `
+    <div class="numbertext">${project.number}</div>
+    <img src="${project.image}" alt="${project.alt}" style="width:100%">
+    <div class="text">${project.text}</div>
+    <a href="#${project.id}" class="link">Detaljer</a>
+  `;
+  return slide;
+}
+
+function createModal(project) {
+  const modal = document.createElement('div');
+  modal.id = project.id;
+  modal.className = 'modal';
+  modal.innerHTML = `
+    <div class="modal-content">
+      <a href='#' class='close'>x</a>
+      <h4>${project.modalTitle}</h4>
+      <p>${project.modalDescription}</p>
+      ${project.modalImage ? `<img src="${project.modalImage}" alt="${project.alt}" class="modal-img">` : ''}
+      ${project.githubLink ? `<a href="${project.githubLink}" class="link" target="_blank">GitHub repository<i class="fa-brands fa-github"></i></a>` : ''}
+      ${project.iframeEmbed || ''}
+    </div>
+  `;
+  return modal;
+}
+
+function addSlideControls(container, slideCount, slideIndex) {
+  const prevButton = createButton('prev', '&#10094;', () => showSlides(slideIndex -= 1));
+  const nextButton = createButton('next', '&#10095;', () => showSlides(slideIndex += 1));
+  container.append(prevButton, nextButton);
+}
+
+function createButton(className, html, clickHandler) {
+  const button = document.createElement('a');
+  button.className = className;
+  button.innerHTML = html;
+  button.onclick = clickHandler;
+  return button;
+}
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName('mySlides');
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = 'none';
+  slides[slideIndex - 1].style.display = 'block';
+}
+
+function setupModalListeners() {
+  document.addEventListener('click', e => {
+    if (e.target.classList.contains('link')) {
+      const modal = document.getElementById(e.target.getAttribute('href').slice(1));
+      if (modal) modal.style.display = 'block';
+      e.preventDefault();
+    } else if (e.target.classList.contains('close')) {
+      e.target.closest('.modal').style.display = 'none';
+    }
+  });
+} */
