@@ -92,7 +92,7 @@ To view this dynamic portfolio page locally:
 
 ## Contact
 
--   **Email:** [Your Email Address] (Replace with your actual email)
+-   **LinkedIn:** (https://www.linkedin.com/in/joseraultenza/)
 -   **GitHub:** [Your GitHub Profile URL](https://github.com/JoseRaul-TR)
 
 ---
