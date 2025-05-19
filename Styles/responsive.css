@@ -1,0 +1,27 @@
+@media screen and (max-width: 480px) {
+  .navbar a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

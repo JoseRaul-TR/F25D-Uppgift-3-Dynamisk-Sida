@@ -1,0 +1,37 @@
+@media (prefers-color-scheme: dark) {
+  header,
+  .navbar {
+    background-color: var(--dark-blur-background);
+  }
+
+  .navbar a,
+  footer p,
+  footer i {
+    color: var(--dark-text-color);
+  }
+
+  footer {
+    color: var(--dark-text-color);
+    background-color: var(--dark-blur-background);
+  }
+
+  footer p {
+    color: var(--dark-text-color);
+  }
+
+  .social-icons a {
+    color: var(--dark-text-color);
+  }
+
+  .social-icons a i {
+    color: var(--dark-text-color);
+  }
+
+  .social-icons a:hover i {
+    color: var(--primary-color);
+  }
+
+  .social-icons a:visited i {
+    color: inherit;
+  }
+}

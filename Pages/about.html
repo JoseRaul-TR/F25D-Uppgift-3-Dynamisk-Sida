@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./Styles/base.css" />
-    <link rel="stylesheet" href="./Styles/general.css" />
-    <link rel="stylesheet" href="./Styles/index.css" />
-    <link rel="stylesheet" href="./Styles/responsive.css" />
-    <link rel="stylesheet" href="./Styles/dark-theme.css" />
-    <link rel="stylesheet" href="./Styles/print.css" />
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/general.css" />
+    <link rel="stylesheet" href="../Styles/about.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
+    <link rel="stylesheet" href="../Styles/print.css" />
 
     <link
       rel="stylesheet"
@@ -26,19 +26,19 @@
       rel="stylesheet"
     />
 
-    <script src="./scripts/navbar-script.js" defer></script>
+    <script src="../Scripts/navbar-script.js" defer></script>
+    <script src="../Scripts/about-script.js" defer></script>
 
-    <title>Hem</title>
+    <title>Om mig</title>
   </head>
-
   <body>
     <!-- header with navbar -->
     <header>
       <nav class="navbar" id="myNavbar">
-        <a href="./index.html" id="homeLink">Hem</a>
-        <a href="./Pages/portfolio.html" id="portfolioLink">Portfolio</a>
-        <a href="./Pages/about.html" id="aboutLink">Om mig</a>
-        <a href="./Pages/contact.html" id="contactLink">Kontakt</a>
+        <a href="../index.html" id="homeLink">Hem</a>
+        <a href="./portfolio.html" id="portfolioLink">Portfolio</a>
+        <a href="./about.html" id="aboutLink">Om mig</a>
+        <a href="./contact.html" id="contactLink">Kontakt</a>
         <a href="javascript:void(0);" class="icon" onclick="contractNavbar()"
           >&#9776;</a
         >
@@ -50,32 +50,44 @@
       <h1>José Raúl Tenza Ramírez</h1>
       <h3>Frontend-utvecklare och musiker</h3>
 
-      <!-- Profile -->
+      <!-- section for profile flexbox -->
       <section class="profile">
         <!-- Profile picture -->
         <div class="img-container">
           <img
-            src="./Assets/Images/Profile-picture.jpeg"
+            src="../Assets/Images/Profile-picture.jpeg"
             alt="José Raúl Tenza Ramírez–Profile picture"
           />
         </div>
 
-        <!-- Text box with short welcome text -->
-        <div class="welcome-text">
-          <h2>Välkommen!</h2>
+        <!-- Text box with short description with link to pop-up CV -->
+        <div class="text-intro-CV">
+          <h2>Om mig</h2>
           <p>
-            Jag är José, en professionell musiker som studerar
-            frontend-utveckling. Nedan hittar du information om de projekt jag
-            har medverkat i under min karriär. På sidorna
-            <a href="./Pages/portfolio.html"> Portfolio</a>,
-            <a href="./Pages/about.html">Om mig</a> och
-            <a href="./Pages/contact.html">Kontakt</a> finns respektive information om
-            de olika projekt jag har skappat eller varit inblandad, information
-            om mig och mitt CV samt kontaktuppgifter. <br /><br />
-            Tack för ditt besök!
+            Hej!
+            <br /><br />
+            Jag heter José och älskar musik! Jag började spela valthorn
+            <span class="emoji">📯</span> när jag var sju och har sedan dess
+            haft en fantastisk resa som musiker. Efter min masterexamen i
+            symfoniskt orkesterspel från Göteborgs Universitet har jag jobbat
+            som frilansande musiker i över tio år, både i Sverige och utomlands.
+            <br />
+            Nu är det dags för ett nytt kapitel!
+            <br />
+            Jag studerar frontend-utveckling <span class="emoji">🧑‍💻</span> på YH
+            Borås för att utveckla mina andra passioner. Förutom musik brinner
+            jag för natur, film och att resa.
           </p>
+          <div id="openModal">Vissa detaljerad CV</div>
         </div>
       </section>
+
+      <!-- Modal CV -->
+      <div id="CVModal" class="modal">
+        <div class="CV-container">
+          <span class="closeModal">&times;</span>
+        </div>
+      </div>
     </main>
 
     <!-- Footer with contact details-->

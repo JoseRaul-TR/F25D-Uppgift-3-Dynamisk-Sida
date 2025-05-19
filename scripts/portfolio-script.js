@@ -1,7 +1,7 @@
 // Using "fetch" to obtain the JSON data
 
 // create manual slideshow from JSON data
-fetch('./JSON/Projects-Portfolio.json')
+fetch('../Data/projects-portfolio.json')
   .then(response => response.json())
   .then(projects => {
     const slideshowContainer = document.querySelector('.slideshow-container');

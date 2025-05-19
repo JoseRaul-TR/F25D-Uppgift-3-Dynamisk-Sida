@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         // Create CV HTML
-        fetch('./JSON/CV.json')
+        fetch('../Data/cv.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

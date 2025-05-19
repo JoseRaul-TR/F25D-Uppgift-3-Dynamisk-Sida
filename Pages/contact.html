@@ -4,8 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <link rel="stylesheet" href="./CSS/navbar-footer-styles.css"> 
-        <link rel="stylesheet" href="./CSS/about-style.css">
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/general.css" />
+    <link rel="stylesheet" href="../Styles/contact.css" />
+    <link rel="stylesheet" href="../Styles/responsive.css" />
+    <link rel="stylesheet" href="../Styles/dark-theme.css" />
+    <link rel="stylesheet" href="../Styles/print.css" />
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     
@@ -13,17 +17,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-        <script src="./scripts/navbar-script.js" defer></script>
-        <script src="./scripts/about-script.js" defer></script>
+        <script src="../Scripts/navbar-script.js" defer></script> 
     
-        <title>Om mig</title>
+        <title>Kontakt</title>
     </head>
 <body>
 
     <!-- header with navbar -->
     <header>
         <nav class="navbar" id="myNavbar">
-                <a href="./index.html" id="homeLink">Hem</a>
+                <a href="../index.html" id="homeLink">Hem</a>
                 <a href="./portfolio.html" id="portfolioLink">Portfolio</a>
                 <a href="./about.html" id="aboutLink">Om mig</a>
                 <a href="./contact.html" id="contactLink">Kontakt</a>
@@ -41,35 +44,22 @@
         <section class="profile">
             <!-- Profile picture -->
             <div class="img-container">
-                <img src="./media/Profile-picture.jpeg" alt="José Raúl Tenza Ramírez–Profile picture">
+                <img src="../Assets/Images/Profile-picture.jpeg" alt="José Raúl Tenza Ramírez Profile picture">
             </div>
 
-            <!-- Text box with short description with link to pop-up CV -->
-            <div class="text-intro-CV">
-                <h2>Om mig</h2>
-                <p>
-                    Hej!
-                    <br><br>
-                    Jag heter José och älskar musik! 
-                    Jag började spela valthorn <span class="emoji">📯</span> när jag var sju och har sedan dess haft en fantastisk resa som musiker. 
-                    Efter min masterexamen i symfoniskt orkesterspel från Göteborgs Universitet har jag jobbat som frilansande musiker i över tio år, både i Sverige och utomlands.
-                    <br>
-                    Nu är det dags för ett nytt kapitel!
-                    <br>
-                    Jag studerar frontend-utveckling <span class="emoji">🧑‍💻</span> på YH Borås för att utveckla mina andra passioner. 
-                    Förutom musik brinner jag för natur, film och att resa.
-                </p>
-                <div id="openModal">Vissa detaljerad CV</div>
+            <div class="contact-info">
+                <h2>Kontakt</h2>
+
+                <ul class="contact-list">
+                    <li><a href="mailto:someone@example.com"><i class="fa-solid fa-at"></i>someone@example.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <span class="emoji">🇸🇪</span>(+46) 0700-000 000 / <span class="emoji">🇪🇸</span>(+34) 600 000 000</li>
+                    <li><a href="https://www.linkedin.com/in/joseraultenza/" target="_blank"><i class="fa-brands fa-linkedin-in"></i>joseraultenza</a></li>
+                    <li><a href="https://github.com/JoseRaul-TR" target="_blank"><i class="fa-brands fa-github"></i>JoseRaul-TR</a></li>
+                    <li><a href="https://maps.app.goo.gl/9sinLkMNp6oxPXYx9" target="_blank"><i class="fa-solid fa-location-dot"></i> Karlstad, Sverige</a></li>
+                </ul>
+                
             </div>
         </section>
-
-        <!-- Modal CV -->
-        <div id="CVModal" class="modal">
-            <div class="CV-container">
-            <span class="closeModal">&times;</span>
-            </div>
-        </div>
-
     </main>
 
     <!-- Footer with contact details-->
